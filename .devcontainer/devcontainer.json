@@ -1,0 +1,23 @@
+{
+  "name": "Android (JDK + SDK)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": { "version": "17" }
+  },
+  "postCreateCommand": "bash .devcontainer/setup-android.sh",
+  "remoteEnv": {
+    "ANDROID_HOME": "/opt/android-sdk",
+    "ANDROID_SDK_ROOT": "/opt/android-sdk",
+    "JAVA_HOME": "/usr/lib/jvm/msopenjdk-17-amd64"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.java",
+        "vscjava.vscode-java-pack",
+        "mhutchie.git-graph",
+        "eamodio.gitlens"
+      ]
+    }
+  }
+}
